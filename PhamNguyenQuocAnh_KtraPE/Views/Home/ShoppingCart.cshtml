@@ -1,0 +1,461 @@
+﻿<style type="text/css">
+    .main-menu ul li img{
+        height:25px;
+    }
+    .main-menu{
+        font-size:1rem;
+        border:groove;
+    }
+        .main-menu ul li {
+            font-size: 15px;
+        }
+        #container-shoppingcart{
+            justify-content:space-between;
+            display:flex;
+           /* border:groove;*/
+        }
+        
+    .mid img{
+        height:20px;
+    }
+    .Price{
+        color:red;
+        font-size:20px;
+    }
+    .hinh img{
+        height:50px;
+    }
+    .mid {
+        margin-top:2rem;
+    }
+    #image-slider {
+        text-align: left;
+        margin: 20px 0;
+    }
+
+    .slider img {
+        height: 400px; /* Chiều cao cho hình chính */
+        width: auto; /* Để giữ tỷ lệ */
+        border: 2px solid gray;
+        border-radius: 10px;
+    }
+
+    .thumbnails {
+        margin-top: 10px;
+        border:groove;
+    }
+
+        .thumbnails img {
+            height: 50px; /* Chiều cao cho hình thu nhỏ */
+            width: 60px; /* Chiều rộng cho hình thu nhỏ */
+            margin: 0 5px;
+            cursor: pointer;
+            border: 2px solid transparent; /* Biên mặc định */
+            border-radius: 5px;
+        }
+
+            .thumbnails img:hover {
+                border-color: deepskyblue; /* Biên khi hover */
+            }
+
+    .uudiem a{
+        text-decoration: none;
+        color:black;
+    }
+    .uudiem a b{
+        color :gray;
+    }
+        .uudiem img{
+            height:20px;
+        }
+        .fast b{
+            color: lawngreen;
+        }
+        .fast span{
+            color:gray;
+
+        }
+        .link a{
+            text-decoration:none;
+            color:black;
+        }
+            .link a img {
+                height: 50px;
+                margin-block:0.5rem;
+            }
+
+    /*#Allright{
+        display:flex;
+        justify-content:center; 
+    }*/
+
+        .logo1 img{
+            height:40px;
+            
+        }
+    .font img {
+        height: 20px; /* Điều chỉnh kích thước hình ảnh nếu cần */
+        margin-left: 5px; /* Khoảng cách bên trái hình ảnh */
+    }
+    .font a{
+        text-decoration:none;
+        color:black;
+    }
+    .font1 span{
+        color:yellow;
+    }
+    .font1 a{
+        color:gray;
+    }
+    .right div {
+        display: block; /* Đảm bảo rằng <div> sẽ xuống dòng */
+        margin-top: 10px; /* Thêm khoảng cách nếu cần */
+    }
+    .sl{
+        font-size:20px;
+        
+    }
+    .thanhtien p img{
+        height:50px;
+    }
+    
+    .mua-ngay {
+        background-color: red;
+        color: white;
+        padding: 10px 160px;
+        border-radius: 5px; 
+        text-align: center; 
+        display: inline-block; 
+        text-decoration: none; 
+    }
+
+    .them-gio-hang {
+        background-color: white;
+        color: dodgerblue;
+        padding: 10px 130px;
+        border-radius: 5px;
+        text-align: center;
+        display: inline-block;
+        text-decoration: none;
+        border: 2px solid deepskyblue;
+    }
+
+    .mua-truoc-tra-sau {
+        background-color: white;
+        color: dodgerblue;
+        padding: 10px 135px;
+        border-radius: 5px;
+        text-align: center;
+        display: inline-block;
+        text-decoration: none;
+        border: 2px solid deepskyblue;
+    }
+        
+    .quantity-control {
+        display: flex;
+        align-items: center;
+       
+        
+    }
+
+        .quantity-control button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+            .quantity-control button:hover {
+                background-color: dodgerblue;
+            }
+
+    #quantity {
+        width: 40px;
+        height:30px;
+        text-align: center;
+        margin: 0 5px;
+        border: 1px solid #ccc;
+    }
+    #total-price {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        color: black; 
+    }
+    .list a{
+        text-decoration:none;
+        color:gray;
+    }
+        .list a:hover {
+            text-decoration: underline; 
+            color: gray; 
+        }
+    .checkbox-label {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+        .checkbox-label input {
+            display: none; 
+        }
+
+    .checkbox-text {
+        padding: 5px 10px; 
+        border: 2px solid transparent;
+        border-radius: 5px; 
+        transition: border-color 0.3s; 
+    }
+
+    .checkbox-label input:checked + .checkbox-text {
+        border-color: deepskyblue; 
+    }
+    .mau b a{
+        text-decoration:none;
+        color:cornflowerblue;
+    }
+    .diachi a{
+        margin-right:6rem;
+        text-decoration:none;
+        color:black;
+    }
+    .link a {
+        margin-right: 6rem;
+    }
+    .link{
+        border:groove;
+    }
+    .link1{
+        border:groove;
+    }
+    .link2{
+        border:groove;
+    }
+    .hinh img{
+        width:380px;
+        height:100px;
+    }
+    .sao span{
+        color:yellow;
+    }
+    .dky{
+        margin-left:6.5rem;
+    }
+
+    .doi{
+        margin-left:2rem;
+    }
+</style>
+@{
+    ViewBag.Title = "ShoppingCart";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+
+<nav class="main-menu">
+    <ul>
+        <li>
+            
+        <a href="#">Cam kết</a>
+        </li>
+        <li>
+              <a href="#">
+                <img src="~/Content/img/Ảnh chụp màn hình 2024-10-01 104752.png" />
+              </a>
+             <a href="#">100% hàng thật
+                 </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="~/Content/img/Ảnh chụp màn hình 2024-10-01 104903.png" />
+            </a>
+        <a href="#">Hoàn 200% nếu là hàng giả</a></li>
+        <li>
+            <a href="#">
+                <img src="~/Content/img/Ảnh chụp màn hình 2024-10-01 104919.png" />
+            </a>
+        <a href="#">30 ngày đổi trả</a>
+        </li>
+        <li>
+            <a href="#">
+<img src="~/Content/img/Ảnh chụp màn hình 2024-10-01 104924.png" /></a>
+        <a href="#">Giao nhanh 2h</a>
+        </li>
+        <li>
+            <a href="#">
+<img src="~/Content/img/Ảnh chụp màn hình 2024-10-01 104928.png" /></a>
+        <a href="#">Giá siêu rẻ</a> 
+        </li>
+        <li>
+            <a href="#">
+                <img src="~/Content/img/Ảnh chụp màn hình 2024-10-01 104933.png" />
+            </a>
+        <a href="#">Freeship mọi đơn</a>
+        </li>
+    </ul>
+</nav>
+
+<div id="listgohome" class="list">
+    <a href="#">Trang chủ</a><span>&#62;</span>
+    <a href="#">Đồ Chơi - Mẹ & Bé</a><span>&#62;</span>
+    <a href="#">Dinh dưỡng cho người lớn</a><span>&#62;</span>
+    <a>Lon Sữa Glucerna 800g/lon - Tặng 2 gói dùng thử</a>
+    
+
+
+</div>
+<div id="container-shoppingcart">
+    <div class="left">
+        <section id="image-slider">
+            <div class="slider">
+                <img id="slider-image" src="~/Content/img/a.png" alt="Slider Image" />
+            </div>
+            <div class="thumbnails">
+                <img src="~/Content/img/a.png" onclick="changeImage('~/Content/img/a.jpg')" />
+                <img src="~/Content/img/b.png" onclick="changeImage('~/Content/img/b.jpg')" />
+                <img src="~/Content/img/c.png" onclick="changeImage('~/Content/img/c.jpg')" />
+                <img src="~/Content/img/d.png" onclick="changeImage('~/Content/img/d.jpg')" />
+            </div>
+            <div class="uudiem">
+                <a href="#"><img src="~/Content/img/653.png" /> <b>Xem thêm</b> Ưu điểm & lưu ý của sản phẩm <span>&#62;</span> </a>
+            </div>
+
+        </section>
+    </div>
+    <div class="mid">
+        <form class="link2">
+        <div class="mau">
+        <a>
+            <img src="~/Content/img/34.png" />
+        </a>
+        <a>
+            <img src="~/Content/img/231.png" />
+        </a>
+        
+        <b>Thương hiệu: <a href="#">Glucerna</a></b>
+         </div>
+        <h3>Lon Sữa Glucerna 800g/lon - Tặng 2 gói dùng thử</h3>
+        <a class="sao">
+            5.0<span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>(12) | Đã bán 113
+        </a>
+        <p class="Price">
+            1.034.550<span>&#8363;</span>
+        </p>
+        <p>
+            Hương vị
+        </p>
+        <label class="checkbox-label">
+            <input type="checkbox" name="flavor" value="vani" />
+            <span class="checkbox-text">Vani</span>
+        </label>
+            </form>
+        <form class="link1">
+            <div class="diachi">
+                <h3><b>Thông tin vận chuyển</b></h3>
+                <a href="#">Giao đến Q. 1, Bến Nghé,Hồ Chí Minh </a>
+                <a class="doi" href="#" id="change-address" style="color: dodgerblue; text-decoration: none;">Đổi</a>
+            </div>
+            <div class="fast">
+                <img src="~/Content/img/fast.png" /> Giao siêu tốc 2h
+                <p>Trước 16h hôm nay: <b>Miễn phí</b> <span style="text-decoration: line-through;">25.000<span>&#8363;</span></span></p>
+                <img src="~/Content/img/sun.png" /> Giao đúng sáng mai
+                <p>
+                    8h - 12h, 06/10: <b>Miễn phí</b> <span style="text-decoration: line-through;">19.600<span>&#8363;</span></span>
+                </p>
+                <img src="~/Content/img/car.png" /> Freeship 10k đơn từ 45k, Freeship 25k đơn từ 100k
+
+            </div>
+
+        </form>
+        <form class="link">
+
+            <h3><b>Dịch vụ bổ sung</b></h3>
+
+            <a href="#">
+                <img src="~/Content/img/tikacard.png" /> Ưu đãi đến 600k với thẻ TikiCard
+            </a>
+            <a href="#" id="change-address" style="color: dodgerblue; text-decoration: none;">Đăng ký</a>
+            <br />
+            <a href="#">
+                <img src="~/Content/img/paylater.png" /> Mua trước trả sau
+            </a>
+            <a class="dky" href="#" id="change-address" style="color: dodgerblue; text-decoration: none;">Đăng ký</a>
+        </form>
+    </div>
+    <section id="Allright" class="right">
+        <header>
+            <div class="logo1">
+                <a href="#"> <img src="~/Content/img/tiki.png" /></a>
+            </div>
+            <div class="font">
+                <a href="#">Tiki Trading</a>
+                <p><img src="~/Content/img/offical.png" /></p>
+
+            </div>
+            <div class="font1">
+                4.7<span>&#9733;</span> <a>(5.5tr+ đánh giá)</a>
+                @*<img src="~/Content/img/danhgia.png" />*@
+                <a href="#"><img src="~/Content/img/chat.png" /></a>
+            </div>
+
+
+
+
+        </header>
+        <div class="thanhtien" style="border:groove">
+            <p><img src="~/Content/img/a.png" />Vani</p>
+            <b class="sl">Số lượng</b>
+            <div class="quantity-control">
+                <button id="decrement">-</button>
+                <input type="number" id="quantity" value="1" min="1" readonly />
+                <button id="increment">+</button>
+            </div>
+            <b class="sl">Tạm tính</b>
+            <p id="total-price">Thành tiền: <span id="price">1.034.550</span> &#8363;</p>
+            <div class="muahang">
+                <p><a href="#" class="xacnhan mua-ngay">Mua ngay</a></p>
+                <p><a href="#" class="xacnhan them-gio-hang">Thêm vào giỏ hàng</a></p>
+                <p><a href="#" class="xacnhan mua-truoc-tra-sau">Mua trước trả sau</a></p>
+            </div>
+        </div>
+       <div class="hinh">
+           <img src="~/Content/img/tiki1.png" />
+       </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const incrementButton = document.getElementById("increment");
+                const decrementButton = document.getElementById("decrement");
+                const quantityInput = document.getElementById("quantity");
+                const totalPrice = document.getElementById("total-price");
+                const itemPrice = 1034550; // Giá sản phẩm
+
+                function updateTotalPrice() {
+                    const quantity = parseInt(quantityInput.value);
+                    const total = quantity * itemPrice;
+                    totalPrice.innerHTML = `Thành tiền: <span>${total.toLocaleString()}</span> &#8363;`;
+                }
+
+                incrementButton.addEventListener("click", function () {
+                    quantityInput.value = parseInt(quantityInput.value) + 1;
+                    updateTotalPrice();
+                });
+
+                decrementButton.addEventListener("click", function () {
+                    if (parseInt(quantityInput.value) > 1) {
+                        quantityInput.value = parseInt(quantityInput.value) - 1;
+                        updateTotalPrice();
+                    }
+                });
+
+
+                updateTotalPrice();
+            });
+        </script>
+
+
+    </section>
+    
+</div>
+
+

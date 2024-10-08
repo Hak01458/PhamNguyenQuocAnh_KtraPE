@@ -1,0 +1,180 @@
+﻿<style type="text/css">
+
+
+    body {
+        background-color: ghostwhite;
+    }
+
+
+    h2 {
+        color: green;
+        display: flex;
+        justify-content: center;
+        background-color: palegreen;
+        font-size: 20px;
+        height: 30px;
+    }
+
+        h2 a {
+            color: blue;
+            margin-left: 1rem;
+        }
+
+    header {
+        background-color: white;
+        border: 5px solid #5486d7;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+        nav ul li {
+            margin-left: 30px;
+            font-size: 1rem;
+        }
+
+    ul li a {
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+    }
+
+    nav ul li img {
+        height: 30px;
+    }
+
+    nav {
+        text-align: right;
+    }
+
+    .vitri {
+        color: black;
+    }
+
+    input {
+        width: 700px;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+    }
+
+        .search-container input {
+            flex-grow: 1;
+            margin-right: 0.5rem;
+        }
+
+    #search-button {
+        color: blue;
+      margin-left:-1rem;    
+    }
+    .Cart {
+        position: relative;
+    }
+
+    .cart-count {
+        position: absolute;
+        top: -70px;
+        left: 370px;
+        background-color: red;
+        color: white;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 50%;
+        margin-block: 10px;
+    }
+    .category-list a{
+       text-decoration:none;
+       color: gray;
+       margin-left:0.6rem;
+    }
+    .category-list{
+        margin-top:1.5rem;
+    }
+    
+</style>
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <div id="container">
+        <h2>Freeship đơn từ 45k, giảm nhiều hơn cùng <a>Freeship</a> Xtra</h2>
+        <header>
+            <div class="logo">
+                <img src="~/Content/img/Ảnh chụp màn hình_1-10-2024_93623_tiki.vn.jpeg" />
+            </div>
+            <div>
+                <input type="text" id="search-input" placeholder="Free đơn từ 45k......" />
+                <button id="search-button">Tìm kiếm</button>
+                <div class="category-list">
+                <a href="#">Điện gia dụng</a>
+                <a href="#">Xe cộ</a>
+                <a href="#">Mẹ & Bé</a>
+                <a href="#">Khỏe đẹp</a>
+                <a href="#">Nhà cửa</a>
+                <a href="#">Sách</a>
+                <a href="#">Thể thao</a>
+                <a href="#">Ensure</a>
+                <a href="#">Ensure Gold</a>
+                <a href="#">Sữa tiểu đường</a>
+                <a href="#">Sữa Enline</a>
+                    </div>
+            </div>
+            
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            <img src="~/Content/img/Ảnh chụp màn hình_1-10-2024_94856_tiki.vn.jpeg" />
+                        </a>
+                        <a href="#">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/Content/img/Ảnh chụp màn hình_1-10-2024_94714_tiki.vn.jpeg" />
+                        </a>
+                        <a href="#">Tài khoản</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="~/Content/img/cart22.jpg" /></a>
+                    </li>
+
+                </ul>
+                <div class="Cart">
+                    <a href="~/Product/ShoppingCart">
+                        <span class="cart-count ">0</span>
+                    </a>
+                </div>
+                <div>
+
+                    <a href="#" class="vitri">
+                        <img src="~/Content/img/Ảnh chụp màn hình 2024-10-01 102346.png" />
+                    </a>
+                    <a href="#" class="vitri">
+                        Giao đến: Q .1, Bến Nghé, Hồ Chí Minh
+                    </a>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>footer</footer>
+</body>
+</html>
